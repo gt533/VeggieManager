@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無人販売所計算器</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    
+    <h1>無人販売所計算器</h1>
+    <div id="input-container">
+        <textarea id="initialStock" placeholder="朝の在庫（例: みかん: 20）" rows="5"></textarea>
+        <textarea id="collectedItems" placeholder="回収数（例: みかん: 2）" rows="5"></textarea>
+        <textarea id="addedItems" placeholder="追加数（例: みかん: 3）" rows="5"></textarea>
+        <textarea id="closingStock" placeholder="閉店時の在庫（例: みかん: 18）" rows="5"></textarea>
+        <input type="text" id="input-default-price" placeholder="デフォルト価格（例: 100）">
+        <textarea id="input-price" placeholder="価格（例: みかん: 50）" rows="5"></textarea>
+        <button onclick="calculate()">計算</button>
+    </div>
+    <div id="output-container">
+        <h2>【販売数】<br> <span id="sales"></span></h2>
+        <h2>【売上】<br> <span id="revenue"></span></h2>
+        <h2>【総売上】<span id="sum"></span></h2>
+    </div>
+
+    <div>
+        <input id="resultText" type="hidden" value=""/>
+        <button id="copyButton">クリップボードへコピー</button>
+        <p id="message">クリップボードにコピーしました！</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
