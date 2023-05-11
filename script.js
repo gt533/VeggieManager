@@ -2,6 +2,9 @@ const copyButton = document.getElementById('copyButton')
 const resultText = document.getElementById('resultText')
 const message = document.getElementById('message')
 
+document.getElementById('input-default-price').value = localStorage.getItem("defaultPrice");
+document.getElementById('input-price').value = localStorage.getItem("priceList");
+
 function calculate() {
     const initialStockList = parseInput(document.getElementById('initialStock').value);
     const collectedItemsList = parseInput(document.getElementById('collectedItems').value);
@@ -50,6 +53,8 @@ function calculate() {
     document.getElementById('revenue').innerText = toText(revenue, "円");
     document.getElementById('sum').innerText = sum + "円";
 
+    localStorage.setItem("defaultPrice",document.getElementById('input-default-price').value);
+    localStorage.setItem("priceList",document.getElementById('input-price').value);
 }
 
 function parseInput(input) {
