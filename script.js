@@ -36,10 +36,10 @@ function calculate() {
 
     str = "";
     str += "【開店時の在庫】\n" + toText(initialStockList, "");
-    if (collectedItemsList.count > 0) {
+    if (collectedItemsList.length > 0) {
         str += "\n【回収】\n" + toText(collectedItemsList, "");
     }
-    if (addedItemsList.count > 0) {
+    if (addedItemsList.length > 0) {
         str += "\n【追加】\n" + toText(addedItemsList, "");
     }
     str += "\n【閉店時の在庫】\n" + toText(closingStockList, "");
